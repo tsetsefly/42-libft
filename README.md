@@ -1,5 +1,11 @@
 # 42_libft
 
+## How to transfer files from one git repo to another repo
+1. move into the directory(ies) and type ```rm -rf .git```
+2. if there are any existing files with the old repo address type ```git rm -r --cached myFolder```
+3. ```git commit -m "comments..."```
+4. ```git push```
+
 /*
 
 1) to what lengths do you go to replicate the exact functionality in edge cases beyond the scope of the original function
