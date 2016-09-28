@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtse <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/23 20:49:59 by dtse              #+#    #+#             */
-/*   Updated: 2016/09/23 20:50:04 by dtse             ###   ########.fr       */
+/*   Created: 2016/09/26 14:32:14 by dtse              #+#    #+#             */
+/*   Updated: 2016/09/26 14:32:36 by dtse             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char		*dst_tmp;
-	const char	*src_tmp;
+	char	*str;
+	int		i;
 
-	dst_tmp = (char*)dst;
-	src_tmp = (const char*)src;
-	if (dst_tmp <= src_tmp)
-		return (ft_memcpy(dst, src, len));
-	else
+	if (!s)
+		return (NULL);
+	i = ft_strlen(s);
+	if (!(str = ft_strnew(i)))
+		return (NULL);
+	while (i--)
 	{
-		dst_tmp += len;
-		src_tmp += len;
-		while (len--)
-			*(--dst_tmp) = *(--src_tmp);
+		str[i] = f(s[i]);
 	}
-	return (dst);
+	return (str);
 }
