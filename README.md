@@ -3,7 +3,7 @@
 ## Unit-tests for libft
 1. [yyang](https://github.com/yyang42/moulitest)
 2. [alelievr](https://github.com/alelievr/libft-unit-test)
-3. [tinfoilpancakes](https://github.com/TinfoilPancakes/libft-testing-tools): combines yyang, alelievr, [quentin](https://github.com/QuentinPerez/Maintest/tree/master/libft), and [yachaka](https://github.com/yachaka/libftASM)
+3. [tinfoilpancakes](https://github.com/TinfoilPancakes/libft-testing-tools): combines yyang, alelievr, [quentin](https://github.com/QuentinPerez/Maintest/tree/master/libft), [yachaka](https://github.com/yachaka/libftASM), and [kyork](https://home.riking.org/42/)
 
 ## How to transfer files from one git repo to another repo
 1. move into the directory(ies) and type ```rm -rf .git```
