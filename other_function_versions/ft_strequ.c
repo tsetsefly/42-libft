@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtse <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/21 10:38:06 by dtse              #+#    #+#             */
-/*   Updated: 2016/09/21 10:38:10 by dtse             ###   ########.fr       */
+/*   Created: 2016/09/26 16:35:46 by dtse              #+#    #+#             */
+/*   Updated: 2016/09/26 16:36:03 by dtse             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-size_t		ft_strlen(const char *str)
+int		ft_strequ(char const *s1, char const *s2)
 {
-	size_t	i;
+	if (!s1 || !s2)
+		return (0);
+	while (*s1 || *s2)
+	{
+		if (*s1 != *s2)
+			return (0);
+		s1++;
+		s2++;
+	}
+	return (1);
+}
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+int main ()
+{
+	printf("ft_strequ: %d\n", ft_strequ('', ' '));
+	// printf("   strequ%d\n", strequ("abc", "abcd"));
+	return (0);
 }
